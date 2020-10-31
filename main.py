@@ -4,11 +4,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime
+import csv
 
 PATH_D = '/usr/bin/chromedriver'
-driver = webdriver.Chrome(PATH_D)
 data = []
 for d in range(1,5):
+    driver = webdriver.Chrome(PATH_D)
     url = "https://www.goalzz.com/?region=-1&area=6&dd={}&mm=9&yy=2020".format(d)
     day = '{}/09/20 '.format(d)
     driver.get(url)

@@ -8,7 +8,7 @@ import csv
 
 PATH_D = '/usr/bin/chromedriver'
 data = []
-for d in range(1,5):
+for d in range(1,30):
     driver = webdriver.Chrome(PATH_D)
     url = "https://www.goalzz.com/?region=-1&area=6&dd={}&mm=9&yy=2020".format(d)
     day = '{}/09/20 '.format(d)
